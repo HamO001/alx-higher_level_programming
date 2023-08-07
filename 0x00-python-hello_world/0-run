@@ -1,2 +1,2 @@
-#!/usr/bin/
-print("hey am steve")
+#!/bin/bash
+python3 $PYFILE
