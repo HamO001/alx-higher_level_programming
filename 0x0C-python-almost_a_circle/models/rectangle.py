@@ -97,3 +97,17 @@ class Rectangle(Base):
         """Override the __str__ method to return formatted string."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """update attributes based on arguments"""
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.id = args[1]
+            if len(args) >= 3:
+                self.id = args[2]
+            if len(args) >= 4:
+                self.id = args[3]
+            if len(args) >= 5:
+                self.id = args[4]
