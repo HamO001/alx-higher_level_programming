@@ -2,6 +2,7 @@
 """Defines a rectangle class."""
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle class, inherits from Base."""
 
@@ -22,9 +23,13 @@ class Rectangle(Base):
     def width(self, value):
         """Setter for width attribute with validation."""
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")  # Check if it's an integer
+            raise TypeError(
+                    "width must be an integer"  # Check if it's an integer
+                    )
         if value <= 0:
-            raise ValueError("width must be > 0")  # Check if it's greater than 0
+            raise ValueError(
+                    "width must be > 0"  # Check if it's greater than 0
+                    )
         self.__width = value  # Set the width attribute
 
     @property
@@ -36,9 +41,13 @@ class Rectangle(Base):
     def height(self, value):
         """Setter for height attribute with validation."""
         if not isinstance(value, int):
-            raise TypeError("height must be an integer")  # Check if it's an integer
+            raise TypeError(
+                    "height must be an integer"  # Check if it's an integer
+                    )
         if value <= 0:
-            raise ValueError("height must be > 0")  # Check if it's greater than 0
+            raise ValueError(
+                    "height must be > 0"  # Check if it's greater than 0
+                    )
         self.__height = value  # Set the height attribute
 
     @property
@@ -52,7 +61,10 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("x must be an integer")  # Check if it's an integer
         if value < 0:
-            raise ValueError("x must be >= 0")  # Check if it's greater than or equal to 0
+            raise ValueError(
+                    "x must be >= 0"
+                    # Check if it's greater than or equal to 0
+                    )
         self.__x = value  # Set the x attribute
 
     @property
@@ -66,7 +78,10 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("y must be an integer")  # Check if it's an integer
         if value < 0:
-            raise ValueError("y must be >= 0")  # Check if it's greater than or equal to 0
+            raise ValueError(
+                    "y must be >= 0"
+                    # Check if it's greater than or equal to 0
+                    )
         self.__y = value  # Set the y attribute
 
     def area(self):
@@ -79,6 +94,6 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def __str__(self):
-        """overide the __str__ method to return formated sting"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
-
+        """Override the __str__ method to return formatted string."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
